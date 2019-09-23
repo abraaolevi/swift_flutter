@@ -1,7 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-flutter_application_path = '/Users/abraaolevi/dev/swift_flutter/flutter_module/'
+root_project_path = File.dirname(File.dirname(__FILE__))
+
+flutter_application_path = root_project_path + '/flutter_module/'
 load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'SwiftFlutter' do
@@ -9,6 +11,6 @@ target 'SwiftFlutter' do
   use_frameworks!
 
   # Pods for SwiftFlutter
-  
+
   install_all_flutter_pods(flutter_application_path)
 end

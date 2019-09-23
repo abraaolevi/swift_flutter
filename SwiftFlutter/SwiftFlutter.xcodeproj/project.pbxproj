@@ -186,22 +186,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftFlutter/Pods-SwiftFlutter-frameworks.sh",
-				"${PODS_ROOT}/../../flutter_module/.ios/Flutter/engine/Flutter.framework",
-				"${PODS_ROOT}/../../flutter_module/.ios/Flutter/App.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFlutter/Pods-SwiftFlutter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/App.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFlutter/Pods-SwiftFlutter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftFlutter/Pods-SwiftFlutter-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftFlutter/Pods-SwiftFlutter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B388A261620D5884FFB8809B /* [CP-User] Run Flutter Build Script */ = {
@@ -209,19 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Users/abraaolevi/dev/swift_flutter/flutter_module/.metadata",
+				"${SRCROOT}/Users/abraao/dev/swift_flutter/flutter_module/.metadata",
 				"${SRCROOT}/../flutter_module/.ios/Flutter/App.framework/App",
 				"${SRCROOT}/../flutter_module/.ios/Flutter/engine/Flutter.framework/Flutter",
 				"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh",
 			);
 			name = "[CP-User] Run Flutter Build Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
