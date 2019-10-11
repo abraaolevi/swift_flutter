@@ -11,7 +11,6 @@ import Flutter
 
 class OpenFlutterTabViewController: UIViewController {
     
-    let flutterEngine = (UIApplication.shared.delegate as? AppDelegate)?.flutterEngine
     var flutterViewController: FlutterViewController?
 
     override func viewDidLoad() {
@@ -22,7 +21,11 @@ class OpenFlutterTabViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
-        
+    
+        // Workaround to routes, create new flutterEngine with entrypoint to start in `main.dart`
+        // WARNINING: its create a momory leak
+        let flutterEngine = FlutterEngine(name: "io.flutter", project: nil)
+        flutterEngine.run(withEntrypoint: "openHome")
         flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)!
         
         if let flutterViewController = flutterViewController {

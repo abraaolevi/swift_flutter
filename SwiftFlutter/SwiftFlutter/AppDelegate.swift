@@ -30,16 +30,16 @@ class AppDelegate: FlutterAppDelegate {
         let homeViewController = ViewController()
         homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
 
-        let otherViewController = ViewController()
+        let otherViewController = CalculatorViewController()
         otherViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         
-        let flutterViewController = OpenFlutterTabViewController()
-        flutterViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
+        let openFlutterViewController = OpenFlutterTabViewController()
+        openFlutterViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
 
         tabBarVC.viewControllers = [
             homeViewController,
-            flutterViewController,
-            otherViewController
+            otherViewController,
+            openFlutterViewController,
         ]
 
         window.rootViewController = UINavigationController(rootViewController: tabBarVC)

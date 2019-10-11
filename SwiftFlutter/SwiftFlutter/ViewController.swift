@@ -27,6 +27,11 @@ class ViewController: UIViewController {
         let flutterEngine = (UIApplication.shared.delegate as? AppDelegate)?.flutterEngine
         let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)!
         
+        // For some reason `setInitialRoute` does not work
+        // at `main.dart`, `main()` prints `window.defaultRouteName` only when FlutterEngine is initialized
+        // a workaround for routes is create a new FlutterEngine passing an entrypoint
+        flutterViewController.setInitialRoute("/home")
+        
         // Present
         // self.present(flutterViewController, animated: true, completion: nil)
         

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="SwiftFlutter" customModuleProvider="target">
+            <connections>
+                <outlet property="firstNumberTextField" destination="cQv-xS-8kC" id="kJP-Bn-d89"/>
+                <outlet property="resultLabel" destination="kY8-Ms-QnC" id="p30-F2-6Io"/>
+                <outlet property="secondNumberTextField" destination="AHn-Ls-LbF" id="EJj-S8-WcI"/>
+                <outlet property="sendButton" destination="7Ki-ny-abV" id="4Cf-ue-brc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHn-Ls-LbF">
+                    <rect key="frame" x="132" y="121" width="150" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="icf-vC-80Z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ki-ny-abV">
+                    <rect key="frame" x="156" y="215" width="102" height="30"/>
+                    <state key="normal" title="Send to Flutter"/>
+                    <connections>
+                        <action selector="validateInputs:" destination="-1" eventType="touchUpInside" id="Vdd-CI-QnH"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-Ms-QnC">
+                    <rect key="frame" x="183" y="294" width="48" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQv-xS-8kC">
+                    <rect key="frame" x="132" y="49" width="150" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="JNP-mQ-sjP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cQv-xS-8kC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="9FJ-AA-8IF"/>
+                <constraint firstItem="7Ki-ny-abV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ahh-qz-jmE"/>
+                <constraint firstItem="cQv-xS-8kC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M3l-Fg-txl"/>
+                <constraint firstItem="kY8-Ms-QnC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q52-Tf-hVK"/>
+                <constraint firstItem="AHn-Ls-LbF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TAi-1x-qtD"/>
+                <constraint firstItem="7Ki-ny-abV" firstAttribute="top" secondItem="AHn-Ls-LbF" secondAttribute="bottom" constant="60" id="ZtF-bj-mBG"/>
+                <constraint firstItem="AHn-Ls-LbF" firstAttribute="top" secondItem="cQv-xS-8kC" secondAttribute="bottom" constant="38" id="s6n-Kd-Uno"/>
+                <constraint firstItem="kY8-Ms-QnC" firstAttribute="top" secondItem="7Ki-ny-abV" secondAttribute="bottom" constant="49" id="vd9-5h-68s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="108.48214285714285"/>
+        </view>
+    </objects>
+</document>
