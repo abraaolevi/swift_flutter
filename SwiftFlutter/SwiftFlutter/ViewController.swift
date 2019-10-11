@@ -27,7 +27,11 @@ class ViewController: UIViewController {
         let flutterEngine = (UIApplication.shared.delegate as? AppDelegate)?.flutterEngine
         let flutterViewController = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)!
         
-        self.present(flutterViewController, animated: false, completion: nil)
+        // Present
+        // self.present(flutterViewController, animated: true, completion: nil)
+        
+        // Push
+        self.navigationController?.pushViewController(flutterViewController, animated: true)
     }
 }
 

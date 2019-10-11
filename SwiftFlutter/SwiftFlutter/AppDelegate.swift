@@ -20,7 +20,30 @@ class AppDelegate: FlutterAppDelegate {
         self.flutterEngine = FlutterEngine(name: "io.flutter", project: nil)
         self.flutterEngine?.run(withEntrypoint: nil)
         GeneratedPluginRegistrant.register(with: self.flutterEngine)
+
+        // Example of viewController.present and push navigation example
+        // window.rootViewController = UINavigationController(rootViewController: ViewController())
         
+        // Example of present into TabBar viewController
+        let tabBarVC = UITabBarController()
+
+        let homeViewController = ViewController()
+        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+
+        let otherViewController = ViewController()
+        otherViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        
+        let flutterViewController = OpenFlutterTabViewController()
+        flutterViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
+
+        tabBarVC.viewControllers = [
+            homeViewController,
+            flutterViewController,
+            otherViewController
+        ]
+
+        window.rootViewController = UINavigationController(rootViewController: tabBarVC)
+
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
